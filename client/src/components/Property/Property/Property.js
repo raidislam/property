@@ -163,6 +163,7 @@ const Property = () => {
           setProperty={setProperty}
           searchValue={searchValue}
           propertyId={propertyId}
+          searchValue={searchValue}
         />
       </Box>
     </Paper>

@@ -25,6 +25,7 @@ const ModalShow = ({
   propertyData,
   propertyId,
   newproperty,
+  searchValue,
 }) => {
   const [propertyname, setpropertyName] = useState("");
   const [userName, setuserName] = useState("");
@@ -35,10 +36,10 @@ const ModalShow = ({
   const updateProperty = (id) => {
     console.log(id);
     axios.put("http://localhost:5000/update", {
-      propertyname: propertyname,
-      name: userName,
-      location: location,
-      phone: phone,
+      propertyname: propertyname || newproperty.propertyname,
+      name: userName || newproperty.name,
+      location: location || newproperty.location,
+      phone: phone || newproperty.phone,
       id: id,
     });
     window.location.reload();
@@ -66,6 +67,14 @@ const ModalShow = ({
               defaultValue={newproperty.propertyname}
               onChange={(e) => {
                 setpropertyName(e.target.value);
+                // const newText = e.target.value;
+                // const text = {
+                //   propertyname: newText,
+                //   name: userName,
+                //   location: location,
+                //   phone: phone,
+                // };
+                // setpropertyName(text);
               }}
             ></TextField>
             <TextField
@@ -76,6 +85,9 @@ const ModalShow = ({
               label="add your name"
               onChange={(e) => {
                 setuserName(e.target.value);
+                // const name = e.target.value;
+                // const newName = { name: name, ...searchValue };
+                // setuserName(newName);
               }}
             ></TextField>
             <TextField
@@ -86,6 +98,9 @@ const ModalShow = ({
               label="add location"
               onChange={(e) => {
                 setLocation(e.target.value);
+                // const newLocation = e.target.value;
+                // const location = { location: newLocation, ...searchValue };
+                // setLocation(location);
               }}
             ></TextField>
             <TextField
@@ -96,6 +111,9 @@ const ModalShow = ({
               label="add phone"
               onChange={(e) => {
                 setphone(e.target.value);
+                // const newPhone = e.target.value;
+                // const phone = { phone: newPhone, ...searchValue };
+                // setphone(phone);
               }}
             ></TextField>
             <Button

@@ -7,29 +7,6 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const propertyItem = [
-  {
-    id: "1",
-    name: "rafiqul islam",
-    location: "Gulshan",
-  },
-  {
-    id: "2",
-    name: "kamal uddin",
-    location: "Gulshan",
-  },
-  {
-    id: "3",
-    name: "jasim khan",
-    location: "Gulshan",
-  },
-  {
-    id: "4",
-    name: "rakibul hasan",
-    location: "Gulshan",
-  },
-];
-
 const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>

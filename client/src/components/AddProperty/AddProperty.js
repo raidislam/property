@@ -25,17 +25,23 @@ const AddProperty = ({
   return (
     <div>
       <Container>
-        <Grid container sx={{ my: "5rem" }}>
+        <Grid container sx={{ my: "2rem" }}>
           <Grid item xs={8}>
             <TextField
               onChange={searchHandler}
-              sx={{ width: "60%" }}
+              sx={{ width: "90%" }}
               label="search property owner..."
-              variant="standard"
+              variant="outlined"
             ></TextField>
           </Grid>
           <Grid item xs={4}>
-            <Button variant="contained" color="primary" onClick={handleOpen}>
+            <Button
+              size="large"
+              sx={{ mt: ".5rem" }}
+              variant="contained"
+              color="primary"
+              onClick={handleOpen}
+            >
               <AddCircleOutlineIcon /> Add Property
             </Button>
           </Grid>
